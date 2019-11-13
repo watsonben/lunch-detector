@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "postinstall": "yarn build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Justin Hallier",
@@ -12,12 +15,12 @@
     "@slack/events-api": "^2.3.0",
     "@slack/rtm-api": "^5.0.3",
     "@slack/web-api": "^5.4.0",
-    "typescript": "^3.7.2"
-  },
-  "devDependencies": {
+    "typescript": "^3.7.2",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
-    "@typescript-eslint/typescript-estree": "^2.6.1",
+    "@typescript-eslint/typescript-estree": "^2.6.1"
+  },
+  "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
