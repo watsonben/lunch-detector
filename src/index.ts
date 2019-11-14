@@ -91,12 +91,6 @@ const matchMessageContent = (message: string): boolean => {
 
   rtm.on('connected', event => {
     console.log('connected to slack and listening...');
-    web.chat
-      .postMessage({
-        channel: 'D8DVCLG69',
-        text: 'test from bot',
-      })
-      .catch(e => console.log('error', e));
   });
 
   rtm.on('message', async (event: Event) => {
@@ -119,7 +113,7 @@ const matchMessageContent = (message: string): boolean => {
             unfurl_links: true,
           })
           .catch(e => {
-            console.log(`Could not send message to ${username}`);
+            console.log(`Could not send message to ${username}`, e);
           });
       });
     }
